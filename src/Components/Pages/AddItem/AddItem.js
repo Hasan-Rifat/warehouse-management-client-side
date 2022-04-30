@@ -1,9 +1,84 @@
 import React from "react";
+import { Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AddItem = () => {
+  const handleAddItem = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const confirmPassword = event.target.confirmPassword.value;
+
+    // toast("Password not match");
+  };
   return (
-    <div>
-      <h2>AddItem</h2>
+    <div className="container pt-6">
+      <div className="w-50 mx-auto shadow-lg p-12 rounded">
+        <h2>Add Product</h2>
+        <Form className="py-6" onSubmit={handleAddItem}>
+          <Form.Group className="mb-3" controlId="formBasicFirstName">
+            <Form.Control
+              type="text"
+              name="productName"
+              placeholder="Product Name"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicLastName">
+            <Form.Control
+              type="text"
+              name="image"
+              placeholder="Image url"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicLastName">
+            <Form.Control
+              type="text"
+              name="description"
+              placeholder="Description"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicLastName">
+            <Form.Control
+              type="text"
+              name="price"
+              placeholder="Price"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicLastName">
+            <Form.Control
+              type="text"
+              name="quantity"
+              placeholder="Quantity"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicLastName">
+            <Form.Control
+              type="text"
+              name="supplier"
+              placeholder="Supplier name"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              required
+            />
+          </Form.Group>
+
+          <Button variant="primary w-100" type="submit">
+            Add Product
+          </Button>
+        </Form>
+      </div>
     </div>
   );
 };

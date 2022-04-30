@@ -1,0 +1,18 @@
+/* header {
+  padding: 2% 0 !important;
+} */
+
+.link {
+  color: #222323 !important;
+}
+.link:hover {
+  color: #97a0b9 !important;
+}
+
+.btn {
+  box-shadow: 0 10px 30px 0 rgb(0 113 220 / 15%);
+}
+.btn:hover {
+  background: #fff !important;
+  color: #0071dc !important;
+}

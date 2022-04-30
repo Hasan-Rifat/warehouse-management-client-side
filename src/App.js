@@ -14,10 +14,14 @@ import Register from "./Components/Pages/Login/Register/Register";
 import ManageItems from "./Components/Pages/ManageItems/ManageItems";
 import AddItem from "./Components/Pages/AddItem/AddItem";
 import MyItems from "./Components/Pages/MyItems/MyItems";
+import NotFound from "./Components/Pages/NotFound/NotFound";
+import "react-toastify/dist/ReactToastify.css";
+import Social from "./Components/Pages/Login/Social/Social";
+import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Header></Header>
       <Routes>
         {/* home page components start   */}
@@ -32,11 +36,35 @@ function App() {
         {/* login & register start  */}
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/social" element={<Social />}></Route>
         {/* login & register end  */}
+
         {/* if user exist route start*/}
-        <Route path="/manageitems" element={<ManageItems />}></Route>
-        <Route path="/additem" element={<AddItem />}></Route>
-        <Route path="/myitems" element={<MyItems />}></Route>
+        <Route
+          path="/manageitems"
+          element={
+            <RequireAuth>
+              <ManageItems />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <AddItem />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/myitems"
+          element={
+            <RequireAuth>
+              <MyItems />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route path="*" element={<NotFound />}></Route>
         {/* if user exist route end */}
       </Routes>
       <ToastContainer />

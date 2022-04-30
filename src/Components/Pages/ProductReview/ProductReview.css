@@ -1,0 +1,22 @@
+.product-heading {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 30.8px;
+  line-height: 30.8px;
+  color: #212529;
+}
+.product-text {
+  color: #777;
+  line-height: 26px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  padding: 4% 0 0 0;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.product-divider {
+  width: 60px;
+  background-color: #1c5fa8;
+  height: 4px;
+  margin: 0 auto 0 0;
+}
