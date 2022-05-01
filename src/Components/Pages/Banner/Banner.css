@@ -21,7 +21,7 @@
   color: #303d51;
   font-weight: 700;
 }
-.banner-btn {
+.banner-main-btn {
   box-shadow: 0 10px 30px 0 rgb(0 113 220 / 15%);
   display: inline-block;
   font-weight: 600;
@@ -38,7 +38,7 @@
   color: #0071dc !important;
 }
 
-.banner-btn:hover {
+.banner-main-btn:hover {
   background-color: #41aef1 !important;
   color: #fff !important;
 }

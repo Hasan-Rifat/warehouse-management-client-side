@@ -58,50 +58,58 @@ const Login = () => {
     toast("Sent email");
   };
   return (
-    <div className="container pt-6 ">
-      <div className="w-50 mx-auto shadow-lg p-12 rounded">
-        <h2>Login</h2>
-        <Form className="py-6" onSubmit={handleLogin}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control
-              type="email"
-              name="email"
-              onBlur={handleEmail}
-              placeholder="Enter email"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
-          </Form.Group>
-          <Button variant="primary " className="w-[81%]" type="submit">
-            Login
-          </Button>
+    <section className="text-center">
+      <div className="container pt-6 ">
+        <div className="w-50 mx-auto shadow-lg p-12 rounded ">
           <div>
-            <Link className="no-underline " to="/register">
-              <Button variant="primary " type="submit" className="w-2/5 mr-1">
-                Create Account
+            <Form className="py-6" onSubmit={handleLogin}>
+              <h2>Login</h2>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control
+                  type="email"
+                  name="email"
+                  onBlur={handleEmail}
+                  placeholder="Enter email"
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Control
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+              </Form.Group>
+              <Button variant="primary " className="w-[81%]" type="submit">
+                Login
               </Button>
-            </Link>
-            <Button
-              variant="primary  "
-              className="my-4 ml-1 w-2/5"
-              onClick={handleResetPassword}
-            >
-              Reset Password
-            </Button>
+              <div>
+                <Link className="no-underline " to="/register">
+                  <Button
+                    variant="primary "
+                    type="submit"
+                    className="w-2/5 mr-1"
+                  >
+                    Create Account
+                  </Button>
+                </Link>
+                <Button
+                  variant="primary  "
+                  className="my-4 ml-1 w-2/5"
+                  onClick={handleResetPassword}
+                >
+                  Reset Password
+                </Button>
+              </div>
+            </Form>
           </div>
-        </Form>
 
-        <Social />
-        {errorMessage}
+          <Social />
+          {errorMessage}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -15,7 +15,7 @@ const Banner = () => {
                 Reliable And Knowledgeable Mechanics Locate In Los Angeles, CA
               </h2>
               <Link to="/login">
-                <button className="banner-btn">GET STARTED</button>
+                <button className="banner-main-btn">GET STARTED</button>
               </Link>
             </div>
           </div>

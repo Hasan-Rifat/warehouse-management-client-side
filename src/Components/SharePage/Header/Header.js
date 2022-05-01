@@ -19,7 +19,7 @@ const Header = () => {
       }); */
   };
   return (
-    <header>
+    <header className="">
       <Navbar
         style={{ boxShadow: "0 0 4px #0000000d" }}
         className="bg-white"
@@ -93,7 +93,10 @@ const Header = () => {
                     My Items
                   </Nav.Link>
 
-                  <button onClick={handleLogOut} className="btn btn-primary">
+                  <button
+                    onClick={handleLogOut}
+                    className="main-btn main-btn-primary"
+                  >
                     LogOut
                   </button>
                 </>

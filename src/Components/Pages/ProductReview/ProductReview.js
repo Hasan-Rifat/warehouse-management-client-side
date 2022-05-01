@@ -7,7 +7,7 @@ const ProductReview = () => {
     <section className="product-review py-20">
       <div className="container">
         <div className="row flex justify-center items-center">
-          <div className="col col-md-5">
+          <div className="cols col-lg-6">
             <div className="product-review-info">
               <h2 className="product-heading">
                 Twenty Years of Top Experience
@@ -27,8 +27,7 @@ const ProductReview = () => {
               </p>
             </div>
           </div>
-          <div className="col col-md-2"></div>
-          <div className="col col-md-5">
+          <div className="cols col-lg-6 pt-10">
             <img src={image} alt="" />
           </div>
         </div>

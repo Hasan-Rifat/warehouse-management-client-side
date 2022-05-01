@@ -5,9 +5,17 @@ const Footer = () => {
   let month = new Date();
   let year = month.getFullYear();
   return (
-    <div className="py-20">
-      <h2>© Copyright by Hasan Rifat {year}</h2>
-    </div>
+    <footer>
+      <div className="container">
+        <div className="row">
+          <div className="cols">
+            <div className="py-20">
+              <h2 className="text-center">© Copyright by Hasan Rifat {year}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

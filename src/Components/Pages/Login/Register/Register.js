@@ -45,70 +45,72 @@ const Register = () => {
   }
 
   return (
-    <div className="container pt-6">
-      <div className="w-50 mx-auto shadow-lg p-12 rounded">
-        <h2>Register</h2>
-        <Form className="py-6" onSubmit={handleRegister}>
-          <Form.Group className="mb-3" controlId="formBasicFirstName">
-            <Form.Control
-              type="text"
-              name="first-name"
-              placeholder="First Name"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicLastName">
-            <Form.Control
-              type="text"
-              name="Name"
-              placeholder="Last Name"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control
-              type="email"
-              name="email"
-              placeholder="Enter email"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control
-              type="password"
-              name="confirmPassword"
-              placeholder="confirm Password"
-              required
-            />
-          </Form.Group>
-          <Button variant="primary" className="w-[81%]" type="submit">
-            Register
-          </Button>
-        </Form>
-        <div>
-          <Link className="no-underline " to="/login">
-            <Button variant="primary " type="submit" className="w-2/5 mr-1">
-              Login
+    <section className="text-center">
+      <div className="container pt-6">
+        <div className="w-50 mx-auto shadow-lg p-12 rounded">
+          <h2>Register</h2>
+          <Form className="py-6" onSubmit={handleRegister}>
+            <Form.Group className="mb-3" controlId="formBasicFirstName">
+              <Form.Control
+                type="text"
+                name="first-name"
+                placeholder="First Name"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicLastName">
+              <Form.Control
+                type="text"
+                name="Name"
+                placeholder="Last Name"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Enter email"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Control
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Control
+                type="password"
+                name="confirmPassword"
+                placeholder="confirm Password"
+                required
+              />
+            </Form.Group>
+            <Button variant="primary" className="w-[81%]" type="submit">
+              Register
             </Button>
-          </Link>
-          <Link className="no-underline " to="/">
-            <Button variant="primary " type="submit" className="w-2/5 mr-1">
-              Return to store
-            </Button>
-          </Link>
+          </Form>
+          <div>
+            <Link className="no-underline " to="/login">
+              <Button variant="primary " type="submit" className="w-2/5 mr-1">
+                Login
+              </Button>
+            </Link>
+            <Link className="no-underline " to="/">
+              <Button variant="primary " type="submit" className="w-2/5 mr-1">
+                Return to store
+              </Button>
+            </Link>
+          </div>
+          <Social />
+          {errorMessage}
         </div>
-        <Social />
-        {errorMessage}
       </div>
-    </div>
+    </section>
   );
 };
 
