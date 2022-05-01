@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import AllServices from "./Components/Pages/AllServices/AllServices";
+import AllCars from "./Components/Pages/AllCars/AllCars";
 import Banner from "./Components/Pages/Banner/Banner";
 import Home from "./Components/Pages/Home/Home";
 import ProductReview from "./Components/Pages/ProductReview/ProductReview";
@@ -29,7 +29,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/banner" element={<Banner />}></Route>
         <Route path="/productreview" element={<ProductReview />}></Route>
-        <Route path="/allservices" element={<AllServices />}></Route>
+        <Route path="/AllCars" element={<AllCars />}></Route>
         <Route path="/testimonial" element={<Testimonial />}></Route>
         <Route path="/blog" element={<Blogs />}></Route>
         {/* home page components end   */}

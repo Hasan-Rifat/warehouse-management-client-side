@@ -2,8 +2,10 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div>
-      <h2>Blogs</h2>
+    <div className="container">
+      <div className="py-28">
+        <h2>Blogs</h2>
+      </div>
     </div>
   );
 };

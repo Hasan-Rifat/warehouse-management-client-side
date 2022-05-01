@@ -39,7 +39,7 @@ const Header = () => {
               <Nav.Link
                 className="font-semibold mx-2 link "
                 as={Link}
-                to="allservices"
+                to="AllCars"
               >
                 Products
               </Nav.Link>
@@ -93,11 +93,8 @@ const Header = () => {
                     My Items
                   </Nav.Link>
 
-                  <button
-                    onClick={handleLogOut}
-                    className="main-btn main-btn-primary"
-                  >
-                    LogOut
+                  <button onClick={handleLogOut} className="btn btn-primary">
+                    Logout
                   </button>
                 </>
               )}

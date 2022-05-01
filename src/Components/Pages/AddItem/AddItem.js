@@ -13,8 +13,8 @@ const AddItem = () => {
     // toast("Password not match");
   };
   return (
-    <div className="container pt-6">
-      <div className="w-50 mx-auto shadow-lg p-12 rounded">
+    <div className="container pt-6 mt-20">
+      <div className="sm:w-100 md:w-50 mx-auto shadow-lg p-8  rounded">
         <h2>Add Product</h2>
         <Form className="py-6" onSubmit={handleAddItem}>
           <Form.Group className="mb-3" controlId="formBasicFirstName">

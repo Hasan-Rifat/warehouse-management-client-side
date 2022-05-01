@@ -24,7 +24,6 @@ const Login = () => {
   let location = useLocation();
 
   const handleEmail = (event) => {
-    // setEmail(event.target.value);
     setEmail(event.target.value);
   };
 
@@ -59,7 +58,7 @@ const Login = () => {
   };
   return (
     <section className="text-center">
-      <div className="container pt-6 ">
+      <div className="container pt-36 ">
         <div className="w-50 mx-auto shadow-lg p-12 rounded ">
           <div>
             <Form className="py-6" onSubmit={handleLogin}>

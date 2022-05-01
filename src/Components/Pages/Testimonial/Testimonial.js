@@ -18,8 +18,8 @@ const Testimonial = () => {
                 With specialists on hand to help with any part of the car
                 shopping or vehicle ownership experience, Motors provides
                 financing, car service and a great selection of vehicles for
-                luxury car shoppers in Chicago, IL. Motors is ultimate
-                Automotive, Car Dealer WordPress theme.
+                luxury car shoppers in Chicago, IL. Motors is ultimate <br />
+                Automotive, Auto Services.
               </p>
             </div>
           </div>

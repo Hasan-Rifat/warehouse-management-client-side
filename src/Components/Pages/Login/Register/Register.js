@@ -46,7 +46,7 @@ const Register = () => {
 
   return (
     <section className="text-center">
-      <div className="container pt-6">
+      <div className="container pt-36">
         <div className="w-50 mx-auto shadow-lg p-12 rounded">
           <h2>Register</h2>
           <Form className="py-6" onSubmit={handleRegister}>

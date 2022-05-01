@@ -1,16 +1,18 @@
 import React from "react";
-import AllServices from "../AllServices/AllServices";
+import SingleCar from "../../SingleCar/SingleCar";
+// import AllCars from "../AllCars/AllCars";
 import Banner from "../Banner/Banner";
 import ProductReview from "../ProductReview/ProductReview";
 import Testimonial from "../Testimonial/Testimonial";
+import "./Home.module.css";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="" id="home">
       <Banner />
       <ProductReview />
-      <AllServices />
       <Testimonial />
+      <SingleCar />
     </div>
   );
 };
