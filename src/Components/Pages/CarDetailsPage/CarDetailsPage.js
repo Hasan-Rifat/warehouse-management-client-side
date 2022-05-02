@@ -15,7 +15,7 @@ const CarDetailsPage = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16 my-12">
       <div className="container rounded p-4 shadow-lg">
         <h2 className="text-center">Id {carsId}</h2>
         <div className="row flex items-center">
@@ -46,7 +46,9 @@ const CarDetailsPage = () => {
                 {/* <small>{quantity}</small> */}
               </p>
               <h4 className="text-lg py-3 font-semibold">
-                Supplier Name : Khan{/* {supplierName} */}
+                Supplier Name :{" "}
+                <span className="text-base font-normal">Khan</span>
+                {/* {supplierName} */}
               </h4>
               <Form
                 className="my-2"
