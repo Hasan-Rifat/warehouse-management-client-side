@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Cars = ({ car, children }) => {
+const Cars = ({ car }) => {
+  const navigate = useNavigate();
   const handleNavigate = (id) => {
-    console.log(id);
+    navigate(`/allcars/${id}`);
   };
   const { _id, supplierName, quantity, price, about, image, productName } = car;
   return (

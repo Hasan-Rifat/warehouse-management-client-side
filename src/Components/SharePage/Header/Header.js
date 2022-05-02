@@ -39,7 +39,7 @@ const Header = () => {
               <Nav.Link
                 className="font-semibold mx-2 link "
                 as={Link}
-                to="AllCars"
+                to="allcars"
               >
                 Products
               </Nav.Link>

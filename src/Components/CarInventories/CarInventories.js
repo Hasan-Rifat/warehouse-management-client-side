@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CarInventories = ({ car }) => {
+  const navigate = useNavigate();
   const handleNavigate = (id) => {
-    console.log(id);
+    navigate(`/allcars/${id}`);
   };
   const handleDelete = (id) => {
     console.log(id);

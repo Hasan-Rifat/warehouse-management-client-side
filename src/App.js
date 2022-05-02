@@ -18,6 +18,7 @@ import NotFound from "./Components/Pages/NotFound/NotFound";
 import "react-toastify/dist/ReactToastify.css";
 import Social from "./Components/Pages/Login/Social/Social";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
+import CarDetailsPage from "./Components/Pages/CarDetailsPage/CarDetailsPage";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/banner" element={<Banner />}></Route>
         <Route path="/productreview" element={<ProductReview />}></Route>
-        <Route path="/AllCars" element={<AllCars />}></Route>
+        <Route path="/allcars" element={<AllCars />}></Route>
+
         <Route path="/testimonial" element={<Testimonial />}></Route>
         <Route path="/blog" element={<Blogs />}></Route>
         {/* home page components end   */}
@@ -40,6 +42,15 @@ function App() {
         {/* login & register end  */}
 
         {/* if user exist route start*/}
+
+        <Route
+          path="/allcars/:carsId"
+          element={
+            <RequireAuth>
+              <CarDetailsPage />
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="/manageitems"
           element={

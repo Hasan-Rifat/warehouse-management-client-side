@@ -19,7 +19,7 @@ const SingleCar = ({ car }) => {
                 <Cars key={car._id} car={car}></Cars>
               ))}
               <div className="text-center pt-16">
-                <Link to="/AllCars">
+                <Link to="/allcars">
                   <button className="btn btn-primary">
                     Manage all inventory
                   </button>

@@ -11,7 +11,7 @@ const AllCars = () => {
       <div className="container">
         <div className="row">
           <div className="cols ">
-            <h2 className="text-center py-14 text-5xl px-0">AllCars</h2>
+            <h2 className="text-center py-14 text-5xl px-0">All Cars</h2>
           </div>
           <div className="container">
             <div className="row ">

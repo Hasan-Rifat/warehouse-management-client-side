@@ -1,6 +1,5 @@
 import React from "react";
 import SingleCar from "../../SingleCar/SingleCar";
-// import AllCars from "../AllCars/AllCars";
 import Banner from "../Banner/Banner";
 import ProductReview from "../ProductReview/ProductReview";
 import Testimonial from "../Testimonial/Testimonial";
