@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Cars = ({ car }) => {
   const navigate = useNavigate();
   const handleNavigate = (id) => {
-    navigate(`/allcars/${id}`);
+    navigate(`/inventories/${id}`);
   };
   const { _id, supplierName, quantity, price, about, image, productName } = car;
   return (

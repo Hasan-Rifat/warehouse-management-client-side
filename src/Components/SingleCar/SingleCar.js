@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Cars from "../Cars/Cars";
 import useAllCars from "../Hooks/useAllCars";
 import "./Single.module.css";
-const SingleCar = ({ car }) => {
+const SingleCar = () => {
   const { cars, setCars } = useAllCars();
   return (
     <section className="pt-28">
@@ -19,7 +19,7 @@ const SingleCar = ({ car }) => {
                 <Cars key={car._id} car={car}></Cars>
               ))}
               <div className="text-center pt-16">
-                <Link to="/allcars">
+                <Link to="/inventories">
                   <button className="btn btn-primary">
                     Manage all inventory
                   </button>

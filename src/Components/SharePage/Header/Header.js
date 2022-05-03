@@ -36,13 +36,13 @@ const Header = () => {
               <Nav.Link className="font-semibold mx-2 link" as={Link} to="home">
                 Home
               </Nav.Link>
-              <Nav.Link
+              {/* <Nav.Link
                 className="font-semibold mx-2 link "
                 as={Link}
                 to="allcars"
               >
                 Products
-              </Nav.Link>
+              </Nav.Link> */}
 
               <Nav.Link
                 className="font-semibold mx-2 link "
@@ -74,9 +74,9 @@ const Header = () => {
                   <Nav.Link
                     className="font-semibold mx-2 link "
                     as={Link}
-                    to="manageitems"
+                    to="Inventories"
                   >
-                    Manage Items
+                    Inventories
                   </Nav.Link>
                   <Nav.Link
                     className="font-semibold mx-2 link "

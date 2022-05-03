@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const useAllCars = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("allcars.json")
+    fetch("http://localhost:5000/inventories")
       .then((res) => res.json())
       .then((data) => {
         setCars(data);

@@ -11,7 +11,7 @@ import { ToastContainer } from "react-toastify"; //toast
 import Blogs from "./Components/Pages/Blogs/Blogs";
 import Login from "./Components/Pages/Login/Login/Login";
 import Register from "./Components/Pages/Login/Register/Register";
-import ManageItems from "./Components/Pages/ManageItems/ManageItems";
+// import Inventories from "./Components/Pages/Inventories/Inventories";
 import AddItem from "./Components/Pages/AddItem/AddItem";
 import MyItems from "./Components/Pages/MyItems/MyItems";
 import NotFound from "./Components/Pages/NotFound/NotFound";
@@ -19,6 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Social from "./Components/Pages/Login/Social/Social";
 import RequireAuth from "./Components/Pages/Login/RequireAuth/RequireAuth";
 import CarDetailsPage from "./Components/Pages/CarDetailsPage/CarDetailsPage";
+import Inventories from "./Components/Pages/ManageItems/Inventories";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/banner" element={<Banner />}></Route>
         <Route path="/productreview" element={<ProductReview />}></Route>
-        <Route path="/allcars" element={<AllCars />}></Route>
+        {/* <Route path="/inventories" element={}></Route> */}
 
         <Route path="/testimonial" element={<Testimonial />}></Route>
         <Route path="/blog" element={<Blogs />}></Route>
@@ -44,7 +45,15 @@ function App() {
         {/* if user exist route start*/}
 
         <Route
-          path="/allcars/:carsId"
+          path="/inventories"
+          element={
+            <RequireAuth>
+              <AllCars />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/inventories/:carsId"
           element={
             <RequireAuth>
               <CarDetailsPage />
@@ -52,10 +61,10 @@ function App() {
           }
         ></Route>
         <Route
-          path="/manageitems"
+          path="/inventories"
           element={
             <RequireAuth>
-              <ManageItems />
+              <Inventories />
             </RequireAuth>
           }
         ></Route>

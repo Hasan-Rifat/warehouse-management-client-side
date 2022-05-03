@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -9,6 +10,10 @@ const AddItem = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     const confirmPassword = event.target.confirmPassword.value;
+
+    /*  useEffect(() => {
+      fetch();
+    }, []); */
 
     // toast("Password not match");
   };
