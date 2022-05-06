@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
-const useAllCars = () => {
-  const [cars, setCars] = useState([]);
+const useManageItem = () => {
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/inventories")
       .then((res) => res.json())
       .then((data) => {
-        setCars(data);
+        setItems(data);
       });
   }, []);
-  return { cars, setCars };
+  return [items, setItems];
 };
 
-export default useAllCars;
+export default useManageItem;

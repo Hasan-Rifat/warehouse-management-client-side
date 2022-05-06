@@ -1,4 +1,5 @@
 import { async } from "@firebase/util";
+import axios from "axios";
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
@@ -27,12 +28,15 @@ const Login = () => {
     setEmail(event.target.value);
   };
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post("http://localhost:5000/login", { email });
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
   };
   // const navigate = useNavigate();
   if (loading) {
@@ -43,7 +47,7 @@ const Login = () => {
 
   // RequireAuth
   if (user) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
   }
   let errorMessage;
   if (error) {

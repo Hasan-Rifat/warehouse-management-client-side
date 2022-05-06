@@ -1,21 +1,35 @@
 import axios from "axios";
-import React, { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AddItem = () => {
-  const handleAddItem = (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const confirmPassword = event.target.confirmPassword.value;
+  const handleAddItem = async (e) => {
+    e.preventDefault();
+    const allCars = {
+      productName: e.target.productName.value,
+      image: e.target.image.value,
+      about: e.target.about.value,
+      price: e.target.price.value,
+      quantity: e.target.quantity.value,
+      supplierName: e.target.supplierName.value,
+      email: e.target.email.value,
+    };
+    try {
+      const { data } = await axios.post("http://localhost:5000/order", allCars);
+      console.log(data);
+      if (data.success) {
+        e.target.reset();
+      }
 
-    /*  useEffect(() => {
-      fetch();
-    }, []); */
+      if (!data.success) {
+        return toast.error(data.error);
+      }
 
-    // toast("Password not match");
+      toast.success(data.message);
+      console.log(allCars);
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
   return (
     <div className="container pt-6 mt-20">
@@ -43,14 +57,14 @@ const AddItem = () => {
               <Form.Group className="mb-3" controlId="formBasicLastName">
                 <Form.Control
                   type="text"
-                  name="description"
+                  name="about"
                   placeholder="Description"
                   required
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicLastName">
                 <Form.Control
-                  type="text"
+                  type="number"
                   name="price"
                   placeholder="Price"
                   required
@@ -58,7 +72,7 @@ const AddItem = () => {
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicLastName">
                 <Form.Control
-                  type="text"
+                  type="number"
                   name="quantity"
                   placeholder="Quantity"
                   required
@@ -67,7 +81,7 @@ const AddItem = () => {
               <Form.Group className="mb-3" controlId="formBasicLastName">
                 <Form.Control
                   type="text"
-                  name="supplier"
+                  name="supplierName"
                   placeholder="Supplier name"
                   required
                 />

@@ -6,7 +6,7 @@
     "price": "$35,000",
     "quantity": 25,
     "supplierName": "Effie Hawkins",
-    "_id": 0
+    
   },
   {
     "productName": "Nissan Altima 2022",
@@ -15,7 +15,7 @@
     "price": "$18,000",
     "quantity": 35,
     "supplierName": "Sherman Gray",
-    "_id": 1
+    
   },
   {
     "productName": "Acura RDX 2022",
@@ -24,7 +24,7 @@
     "price": "$59,000",
     "quantity": 35,
     "supplierName": "Sondra Harrison",
-    "_id": 2
+    
   },
   {
     "productName": "Tesla Roadster 2022",
@@ -33,7 +33,7 @@
     "price": "$109,000",
     "quantity": 28,
     "supplierName": "Jana Hester",
-    "_id": 3
+    
   },
   {
     "productName": "Lexus RX-350 2022",
@@ -42,7 +42,7 @@
     "price": "$22,000",
     "quantity": 29,
     "supplierName": "Dina Joseph",
-    "_id": 4
+    
   },
   {
     "productName": "Honda Accord 2022",
@@ -51,7 +51,7 @@
     "price": "$24,000",
     "quantity": 30,
     "supplierName": "Kane Mckinney",
-    "_id": 5
+    
   },
   {
     "productName": "Chevrolet Suburban 2022",
@@ -60,7 +60,7 @@
     "price": "$35,000",
     "quantity": 22,
     "supplierName": "Jan Lancaster",
-    "_id": 6
+    
   },
   {
     "productName": "BMW 4-series 2022",
@@ -69,7 +69,7 @@
     "price": "$71,000",
     "quantity": 23,
     "supplierName": "Antoinette Bartlett",
-    "_id": 7
+    
   },
   {
     "productName": "Bentley Flying Spur 2022",
@@ -78,7 +78,7 @@
     "price": "$305,700",
     "quantity": 37,
     "supplierName": "Rebecca Moses",
-    "_id": 8
+    
   },
   {
     "productName": "Acura ILX 2022",
@@ -87,7 +87,7 @@
     "price": "$27,000",
     "quantity": 33,
     "supplierName": "Charity Middleton",
-    "_id": 9
+    
   },
   {
     "productName": "Mazda CX-30 2022",
@@ -96,7 +96,7 @@
     "price": "$23,000",
     "quantity": 21,
     "supplierName": "Geneva Graham",
-    "_id": 10
+    0
   },
   {
     "productName": "Ford F-150 Raptor 2022",
@@ -105,6 +105,6 @@
     "price": "$78,000",
     "quantity": 34,
     "supplierName": "Lupe Hickman",
-    "_id": 11
+    1
   }
 ]

@@ -1,14 +1,12 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const CarInventories = ({ car }) => {
+const CarInventories = ({ car, handleDelete }) => {
   const navigate = useNavigate();
   const handleNavigate = (id) => {
     navigate(`/inventories/${id}`);
   };
-  const handleDelete = (id) => {
-    console.log(id);
-  };
+  // delete cars
+
   const { _id, supplierName, quantity, price, about, image, productName } = car;
   return (
     <div className="cols col-md-4 g-4">
@@ -34,8 +32,8 @@ const CarInventories = ({ car }) => {
               Update
             </button>
             <button
-              onClick={() => handleDelete(_id)}
               className="btn btn-primary my-3"
+              onClick={() => handleDelete(car._id)}
             >
               Delete
             </button>
