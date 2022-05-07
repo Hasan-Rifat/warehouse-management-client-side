@@ -14,16 +14,19 @@ const ProductReview = () => {
               </h2>
               <div className="product-divider"></div>
               <p className="product-text">
-                Cras a elit sit amet leo accumsan volutpat. Suspendisse
-                hendrerit vehicula leo, vel efficitur felis ultrices non.
-                Integer aliquet ullamcorper dolor, quis sollicitudin.
+                A mechanic usually works from the workshop in which the (well
+                equipped) mechanic has access to a vehicle lift to access areas
+                that are difficult to reach when the car is on the ground.
+                Beside the workshop bound mechanic, there are mobile mechanics
+                like those of the UK Automobile Association (the AA) which allow
+                the car owner to receive assistance without the car necessarily
+                having to be brought to a garage.
               </p>
               <p className="product-text">
-                Cras a elit sit amet leo accumsan volutpat. Suspendisse
-                hendrerit vehicula leo, vel efficitur felis ultrices non.
-                Integer aliquet ullamcorper dolor, quis sollicitudin.
-                Suspendisse hendrerit vehicula leo, vel efficitur felis ultrices
-                non.
+                A mechanic may opt to engage in other careers related to his or
+                her field. Teaching of automotive trade courses, for example, is
+                almost entirely carried out by qualified mechanics in many
+                countries.
               </p>
             </div>
           </div>

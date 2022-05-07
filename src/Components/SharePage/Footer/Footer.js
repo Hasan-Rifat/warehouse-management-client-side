@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="row">
           <div className="cols">
             <div className="absolute bottom-5 left-0 right-0">
-              <h2 className="sm:text-xs md:text-xl text-center text-[#000b76]">
+              <h2 className="text-xs md:text-lg text-center text-[#000b76]">
                 © Copyright by Hasan Rifat {year}
               </h2>
             </div>

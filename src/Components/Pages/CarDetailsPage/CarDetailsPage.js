@@ -9,7 +9,7 @@ const CarDetailsPage = () => {
   const { supplierName, quantity, price, about, image, productName } = car;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/car/${carsId}`)
+    fetch(`https://hasan-rifat-assignment-11.herokuapp.com/car/${carsId}`)
       .then((res) => res.json())
       .then((data) => setCar(data));
   }, [carsId]);
@@ -35,7 +35,7 @@ const CarDetailsPage = () => {
       productName: car.productName,
       quantity: quantity,
     };
-    const url = `http://localhost:5000/car/${carsId}`;
+    const url = `https://hasan-rifat-assignment-11.herokuapp.com/car/${carsId}`;
     fetch(url, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -67,7 +67,7 @@ const CarDetailsPage = () => {
       image: car.image,
       productName: car.productName,
     };
-    const url = `http://localhost:5000/car/${carsId}`;
+    const url = `https://hasan-rifat-assignment-11.herokuapp.com/car/${carsId}`;
     fetch(url, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -82,22 +82,21 @@ const CarDetailsPage = () => {
 
   return (
     <section className="py-16 my-12">
-      <div className="container rounded p-4 shadow-lg">
-        <h2 className="text-center">Id {carsId}</h2>
-        <div className="row flex items-center">
-          <div className="cols col-md-7 g-4 py-5">
+      <div className="container rounded  shadow-lg ">
+        <div className="row flex items-center p-12">
+          <div className="cols col-md-7">
             <div className="">
               <img className="rounded" src={image} alt="" />
             </div>
           </div>
           <div className="cols col-md-5 py-5">
             <div className="">
-              <h2 className="text-2xl py-2">
-                <span className="font-semibold">Name : {productName} </span>
+              <h2 className="text-3xl py-2">
+                <span className="font-semibold">{productName}</span>
               </h2>
               <p>
                 <span className="font-semibold text-lg">
-                  Description : <small>{about?.slice(0, 20)}</small>
+                  Description : <small>{about?.slice(0, 150)}</small>
                 </span>
               </p>
               <p>
@@ -109,7 +108,7 @@ const CarDetailsPage = () => {
                 <span className="font-semibold text-lg">Quantity</span> :{" "}
                 <small>{quantity}</small>
               </p>
-              <h4 className="text-lg py-3 font-semibold">
+              <h4 className="text-lg font-semibold">
                 Supplier Name :{" "}
                 <span className="text-base font-normal">{supplierName}</span>
               </h4>

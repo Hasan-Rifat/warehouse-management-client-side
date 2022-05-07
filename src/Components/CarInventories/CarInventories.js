@@ -15,7 +15,7 @@ const CarInventories = ({ car, handleDelete }) => {
         <div className="py-2">
           <h2 className="text-lg">Name: {productName}</h2>
           <p>
-            Description : <small>{about?.slice(0, 20)}</small>
+            Description : <small>{about?.slice(0, 170)}</small>
           </p>
           <p>
             Price : <span>{price}</span>

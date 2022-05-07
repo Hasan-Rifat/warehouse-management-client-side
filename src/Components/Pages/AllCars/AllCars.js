@@ -14,7 +14,9 @@ const AllCars = () => {
       toast.success("Item has been removed");
     }
     if (agree) {
-      await axios.delete(`http://localhost:5000/car/${id}`);
+      await axios.delete(
+        `https://hasan-rifat-assignment-11.herokuapp.com/car/${id}`
+      );
       const carItem = cars.filter((item) => item._id !== id);
       setCars(carItem);
     }

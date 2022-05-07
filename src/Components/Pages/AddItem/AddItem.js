@@ -15,7 +15,10 @@ const AddItem = () => {
       email: e.target.email.value,
     };
     try {
-      const { data } = await axios.post("http://localhost:5000/order", allCars);
+      const { data } = await axios.post(
+        "https://hasan-rifat-assignment-11.herokuapp.com/order",
+        allCars
+      );
       console.log(data);
       if (data.success) {
         e.target.reset();

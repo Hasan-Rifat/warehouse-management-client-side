@@ -4,7 +4,7 @@ const useManageItem = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/inventories")
+    fetch("https://hasan-rifat-assignment-11.herokuapp.com/inventories")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
