@@ -9,7 +9,9 @@ const CarDetailsPage = () => {
   const { supplierName, quantity, price, about, image, productName } = car;
 
   useEffect(() => {
-    fetch(`https://hasan-rifat-assignment-11.herokuapp.com/car/${carsId}`)
+    fetch(
+      `https://warehouse-management-server-one.vercel.app/api/v1/car/${carsId}`
+    )
       .then((res) => res.json())
       .then((data) => setCar(data));
   }, [carsId]);
@@ -35,7 +37,7 @@ const CarDetailsPage = () => {
       productName: car.productName,
       quantity: quantity,
     };
-    const url = `https://hasan-rifat-assignment-11.herokuapp.com/car/${carsId}`;
+    const url = `https://warehouse-management-server-one.vercel.app/api/v1/car/${carsId}`;
     fetch(url, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -67,7 +69,7 @@ const CarDetailsPage = () => {
       image: car.image,
       productName: car.productName,
     };
-    const url = `https://hasan-rifat-assignment-11.herokuapp.com/car/${carsId}`;
+    const url = `https://warehouse-management-server-one.vercel.app/api/v1/car/${carsId}`;
     fetch(url, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },

@@ -16,7 +16,8 @@ const AddItem = () => {
     };
     try {
       const { data } = await axios.post(
-        "https://hasan-rifat-assignment-11.herokuapp.com/order",
+        //add car api
+        "https://warehouse-management-server-one.vercel.app/api/v1/car",
         allCars
       );
       console.log(data);

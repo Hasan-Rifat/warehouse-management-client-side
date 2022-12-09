@@ -15,7 +15,7 @@ const AllCars = () => {
     }
     if (agree) {
       await axios.delete(
-        `https://hasan-rifat-assignment-11.herokuapp.com/car/${id}`
+        `https://warehouse-management-server-one.vercel.app/api/v1/car/${id}`
       );
       const carItem = cars.filter((item) => item._id !== id);
       setCars(carItem);

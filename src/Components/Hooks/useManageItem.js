@@ -4,7 +4,9 @@ const useManageItem = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://hasan-rifat-assignment-11.herokuapp.com/inventories")
+    fetch(
+      "https://warehouse-management-server-one.vercel.app/api/v1/inventories"
+    )
       .then((res) => res.json())
       .then((data) => {
         setItems(data);

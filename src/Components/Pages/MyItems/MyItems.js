@@ -1,11 +1,11 @@
 import axios from "axios";
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
-import auth from "../../../firebase.init";
+import { Button } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
-import { Button } from "react-bootstrap";
+import auth from "../../../firebase.init";
 
 const MyItems = () => {
   const [user] = useAuthState(auth);
@@ -15,7 +15,7 @@ const MyItems = () => {
     //
     const getOrders = async () => {
       const email = user.email;
-      const url = `https://hasan-rifat-assignment-11.herokuapp.com/order?email=${email}`;
+      const url = `https://warehouse-management-server-one.vercel.app/api/v1/order?email=${email}`;
       try {
         const { data } = await axios.get(url, {
           headers: {

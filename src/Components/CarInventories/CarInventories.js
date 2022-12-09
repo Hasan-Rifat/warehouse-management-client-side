@@ -33,7 +33,7 @@ const CarInventories = ({ car, handleDelete }) => {
             </button>
             <button
               className="btn btn-primary my-3"
-              onClick={() => handleDelete(car._id)}
+              onClick={() => handleDelete(_id)}
             >
               Delete
             </button>
